@@ -3,25 +3,30 @@
 > This is the code acompaning the paper "The Future is Different: Predicting Reddits Popularity with
 Variational Dynamic Language Models".
 
-Large pre-trained language models (LPLM) have shown spectacular
-success when fine-tuned on downstream supervised tasks. Yet, it is
-known that their performance can drastically drop when there is a
-distribution shift between the data used during training and that
-used at inference time. In this paper we focus on data distributions
-that naturally change over time and introduce four new Reddit
-datasets, namely the Wallstreetbets, AskScience, The Donald,
-and Politics sub-reddits. First, we empirically demonstrate that
-LPLM can display average performance drops of about 88% (in the
-best case!) when predicting the popularity of future posts from
-sub-reddits whose topic distribution changes with time. We then
-introduce a simple methodology that leverages neural variational
-dynamic topic models and attention mechanisms to infer temporal
-language model representations for regression tasks. Our models
-display performance drops of only about 40% in the worst cases (2%
-in the best ones) when predicting the popularity of future posts,
-while using only about 7% of the total number of parameters of
-LPLM and providing interpretable representations that offer insight
-into real-world events, like the GameStop short squeeze of 2021.
+Large pre-trained language models (LPLM)
+have shown spectacular success when finetuned 
+on downstream supervised tasks. Yet, it
+is known that their performance can drastically
+drop when there is a distribution shift between
+the data used during training and that used at inference time. 
+In this paper we focus on data distributions that 
+naturally change over time and
+introduce four new REDDIT datasets, namely
+the WALLSTREETBETS , ASKSCIENCE, THE
+DONALD, and POLITICS sub-reddits. First, we
+empirically demonstrate that LPLM can display average performance drops of about 79%
+in the best case (103% in the worst case) when
+predicting the popularity of future posts from
+sub-reddits whose topic distribution changes
+with time. We then introduce a simple methodology that leverages neural variational dynamic
+topic models and attention mechanisms to infer temporal language model representations
+for regression tasks. Our models display performance drops of only about 33% in the best
+cases (82% in the worst ones) when predicting the popularity of future posts, while using
+only about 7% of the total number of parameters of LPLM and providing interpretable rep-
+resentations that offer insight into real-world
+events, like the GameStop short squeeze of
+2021.
+
 
 ## Installation
 

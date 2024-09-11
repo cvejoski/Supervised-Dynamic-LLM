@@ -47,30 +47,3 @@ class AttentionLayer(nn.Module):
         """
         torch.nn.init.normal_(self.m_context)
         torch.nn.init.zeros_(self.b_context)
-
-
-class SelfAttentionLayer(nn.Module):
-
-    def __init__(self, in_dim, attention_dim, delta: float):
-        super(SelfAttentionLayer, self).__init__()
-        self.m_alpha_query = nn.Parameter(torch.Tensor(attention_dim, in_dim))
-        self.m_alpha_key = nn.Parameter(torch.Tensor(attention_dim, in_dim))
-        self.m_alpha_value = nn.Parameter(torch.Tensor(attention_dim, in_dim))
-
-        self.m_u_query = nn.Parameter(torch.Tensor(attention_dim, in_dim))
-        self.m_u_key = nn.Parameter(torch.Tensor(attention_dim, in_dim))
-        self.m_u_value = nn.Parameter(torch.Tensor(attention_dim, in_dim))
-
-        self.delta = delta
-        self.param_init()
-
-    def param_init(self):
-        """
-        Parameters initialization.
-        """
-        torch.nn.init.normal_(self.m_alpha_query)
-        torch.nn.init.normal_(self.m_alpha_key)
-        torch.nn.init.normal_(self.m_alpha_value)
-        torch.nn.init.normal_(self.m_u_query)
-        torch.nn.init.normal_(self.m_u_key)
-        torch.nn.init.normal_(self.m_u_value)
